@@ -4,23 +4,15 @@
   user: vagrant
 
   tasks:
-    #- name: Hello server
-    #  shell: date >> now.txt
-
     - name: install packages
       become: yes
       apt: name={{item}} update_cache=yes state=latest
       with_items:
         - build-essential
-        - zsh
-        - golang
 
     - name: vim
       become: yes
       shell: aptitude install -y vim-gnome
-
-    - name: clone dotfiles
-      git: repo=https://github.com/naofumi-fujii/dotfiles.git dest=/home/vagrant/dotfiles
 
     - name: install dein.vim
       shell: |
@@ -35,23 +27,10 @@
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.zshrc dest=/home/vagrant/.zshrc
 
-    - name: change vimrc path to vagrant
+    - name: update dein.vim setting
       shell: |
         sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" .vimrc
 
     - name: .tmux.conf
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf dest=/home/vagrant/.tmux.conf
-
-    - name: git alias
-      shell: |
-        git config --global alias.st status
-
-    - name: Be sure shell is zsh
-      command: grep vagrant /etc/passwd
-      register: resultsh
-
-    - name: Change shell to zsh
-      become: yes
-      command: chsh -s /usr/bin/zsh vagrant
-      when: resultsh.stdout.find('/usr/bin/zsh') == -1
