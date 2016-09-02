@@ -7,9 +7,12 @@
     #- name: Hello server
     #  shell: date >> now.txt
 
-    - name: install packages zsh
+    - name: install packages
       become: yes
-      apt: name=zsh update_cache=yes
+      apt: name={{item}} update_cache=yes
+      with_items:
+        - build-essential
+        - zsh
 
     - name: vim
       become: yes
