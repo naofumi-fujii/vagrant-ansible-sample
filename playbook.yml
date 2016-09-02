@@ -13,6 +13,7 @@
       with_items:
         - build-essential
         - zsh
+        - golang
 
     - name: vim
       become: yes
