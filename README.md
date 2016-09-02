@@ -1,8 +1,10 @@
 # vagrant-ansible-sample
+development env with vagrant and ansible
 
 requires
 --
 - vagrant
+- virtualbox
 
 quick start
 --
