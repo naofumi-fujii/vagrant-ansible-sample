@@ -13,3 +13,14 @@
 
     - name: clone dotfiles
       git: repo=https://github.com/naofumi-fujii/dotfiles.git dest=/home/vagrant/dotfiles
+
+    - name: .vimrc
+      shell: |
+        curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+        sh ./installer.sh .
+    - name: .vimrc2
+      get_url:
+        url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc dest=/home/vagrant/.vimrc
+    - name: change path
+      shell: |
+        sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" .vimrc
