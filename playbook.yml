@@ -6,3 +6,7 @@
   tasks:
     - name: Hello server
       shell: date >> now.txt
+
+    - name: vim
+      become: yes
+      shell: aptitude install -y vim-gnome
