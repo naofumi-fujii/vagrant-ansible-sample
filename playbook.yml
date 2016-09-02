@@ -9,7 +9,7 @@
 
     - name: install packages
       become: yes
-      apt: name={{item}} update_cache=yes
+      apt: name={{item}} update_cache=yes state=latest
       with_items:
         - build-essential
         - zsh
