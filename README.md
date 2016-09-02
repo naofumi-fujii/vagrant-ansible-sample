@@ -1,6 +1,7 @@
 # vagrant-ansible-sample
 
 requires
+--
 - vagrant
 
 quick start
