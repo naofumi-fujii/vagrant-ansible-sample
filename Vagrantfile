@@ -12,7 +12,7 @@ Vagrant.configure('2') do |config|
     # guest_ansible.extra_vars = extra_vars
     guest_ansible.sudo = false
   end
-  config.vm.provision :shell, inline: "ansible-galaxy install sansible.ruby"
+  config.vm.provision :shell, inline: "ansible-galaxy install zzet.rbenv"
 
   config.vm.provider 'virtualbox' do |v|
     v.memory = 1024
