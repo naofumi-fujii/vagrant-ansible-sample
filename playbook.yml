@@ -18,9 +18,11 @@
       shell: |
         curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
         sh ./installer.sh .
+
     - name: .vimrc
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc dest=/home/vagrant/.vimrc
+
     - name: change vimrc path to vagrant
       shell: |
         sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" .vimrc
@@ -28,3 +30,7 @@
     - name: .tmux.conf
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf dest=/home/vagrant/.tmux.conf
+
+    - name: git alias
+      shell: |
+        git config --global alias.st status
