@@ -7,6 +7,10 @@
     #- name: Hello server
     #  shell: date >> now.txt
 
+    - name: install packages zsh
+      become: yes
+      apt: name=zsh update_cache=yes
+
     - name: vim
       become: yes
       shell: aptitude install -y vim-gnome
