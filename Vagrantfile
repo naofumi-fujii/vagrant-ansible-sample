@@ -5,6 +5,7 @@ Vagrant.configure('2') do |config|
   # config.vm.hostname = 'rails-dev-box'
 
   # config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.provision :shell, inline: "sudo apt-get update"
   config.vm.provision :shell, inline: "sudo apt-get -y install libffi-dev libssl-dev"
 
   config.vm.provision :guest_ansible do |guest_ansible|
