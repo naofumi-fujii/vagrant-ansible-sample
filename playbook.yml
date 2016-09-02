@@ -4,8 +4,8 @@
   user: vagrant
 
   tasks:
-    - name: Hello server
-      shell: date >> now.txt
+    #- name: Hello server
+    #  shell: date >> now.txt
 
     - name: vim
       become: yes
