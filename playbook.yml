@@ -30,6 +30,10 @@
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc dest=/home/vagrant/.vimrc
 
+    - name: .zshrc
+      get_url:
+        url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.zshrc dest=/home/vagrant/.zshrc
+
     - name: change vimrc path to vagrant
       shell: |
         sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" .vimrc
@@ -41,3 +45,11 @@
     - name: git alias
       shell: |
         git config --global alias.st status
+
+    - name: Be sure shell is zsh
+      command: grep vagrant /etc/passwd
+      register: resultsh
+
+    - name: Change shell to zsh
+      command: chsh -s /bin/zsh vagrant
+      when: resultsh.stdout.find('/bin/zsh') == -1
