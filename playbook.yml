@@ -10,3 +10,6 @@
     - name: vim
       become: yes
       shell: aptitude install -y vim-gnome
+
+    - name: clone dotfiles
+      git: repo=https://github.com/naofumi-fujii/dotfiles.git dest=/home/vagrant/dotfiles
