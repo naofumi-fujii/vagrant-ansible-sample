@@ -1,0 +1,40 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  sudo: yes
+  tasks:
+    # Rubyの依存パッケージをinstall
+    - yum: name={{item}} state=latest
+      with_items:
+        - gcc
+        - zlib-devel
+        - openssl-devel
+        - sqlite
+        - sqlite-devel
+        - mysql-devel
+        - libffi-devel
+
+    # Git install
+    - yum: name=git state=latest
+
+    # Rubyをrbenv経由でinstall
+    - git: >
+        repo=https://github.com/sstephenson/rbenv.git
+        dest=/home/vagrant/.rbenv/
+    - git: >
+        repo=https://github.com/sstephenson/ruby-build.git
+        dest=/home/vagrant/.rbenv/plugins/ruby-build/
+    - file: path=/home/vagrant/.rbenv owner=vagrant state=directory recurse=yes
+
+    - shell: rbenv install -v 2.1.5
+      sudo: no
+    - shell: rbenv rehash
+      sudo: no
+    - shell: rbenv global 2.1.5
+      sudo: no
+
+    # おまけに開発に必要なパッケージをinstall
+    - yum: name={{item}} state=latest
+      with_items:
+        - ruby-devel
+        - rubygems
