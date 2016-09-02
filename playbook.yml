@@ -14,13 +14,17 @@
     - name: clone dotfiles
       git: repo=https://github.com/naofumi-fujii/dotfiles.git dest=/home/vagrant/dotfiles
 
-    - name: .vimrc
+    - name: install dein.vim
       shell: |
         curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
         sh ./installer.sh .
-    - name: .vimrc2
+    - name: .vimrc
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc dest=/home/vagrant/.vimrc
-    - name: change path
+    - name: change vimrc path to vagrant
       shell: |
         sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" .vimrc
+
+    - name: .tmux.conf
+      get_url:
+        url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf dest=/home/vagrant/.tmux.conf
