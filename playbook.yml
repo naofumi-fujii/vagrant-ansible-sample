@@ -30,10 +30,6 @@
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc dest=/home/vagrant/.vimrc
 
-    - name: .zshrc
-      get_url:
-        url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.zshrc dest=/home/vagrant/.zshrc
-
     - name: change vimrc path to vagrant
       shell: |
         sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" .vimrc
