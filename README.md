@@ -8,6 +8,5 @@ requires
 
 quick start
 --
-- vagrant plugin install vagrant-guest_ansible
 - git clone
 - vagrant up
