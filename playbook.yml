@@ -30,6 +30,10 @@
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.zshrc dest=/home/vagrant/.zshrc
 
+    - name: set zsh as default shell for vagrant user
+      become: yes
+      command: chsh -s '/usr/bin/zsh' vagrant
+
     - name: .tmux.conf
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf dest=/home/vagrant/.tmux.conf
