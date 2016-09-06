@@ -8,7 +8,7 @@
       become: yes
       shell: |
         ansible-galaxy install zzet.rbenv
-        ansible-galaxy install joshualund.golang
+        ansible-galaxy install sansible.golang
 
   tasks:
     - name: install packages
@@ -45,4 +45,5 @@
         git config --global alias.st status
 
   #roles:
-  #  - role: zzet.rbenv
+  #  - { role: zzet.rbenv }
+  #  - { role: sansible.golang }
