@@ -28,13 +28,13 @@
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc dest=/home/vagrant/.vimrc
 
-    - name: .zshrc
-      get_url:
-        url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.zshrc dest=/home/vagrant/.zshrc
-
     - name: update dein.vim setting
       shell: |
         sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" .vimrc
+
+    - name: .zshrc
+      get_url:
+        url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.zshrc dest=/home/vagrant/.zshrc
 
     - name: .tmux.conf
       get_url:
