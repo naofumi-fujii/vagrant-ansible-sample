@@ -38,5 +38,9 @@
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf dest=/home/vagrant/.tmux.conf
 
+    - name: git alias
+      shell: |
+        git config --global alias.st status
+
   #roles:
   #  - role: zzet.rbenv
