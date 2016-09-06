@@ -8,6 +8,7 @@
       become: yes
       shell: |
         ansible-galaxy install zzet.rbenv
+        ansible-galaxy install joshualund.golang
 
   tasks:
     - name: install packages
