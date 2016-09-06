@@ -14,21 +14,21 @@
         - vim-gnome
         - zsh
 
-    #- name: install dein.vim
-    #  get_url:
-    #    url=https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh dest=/home/vagrant/.vimrc
+    - name: install dein.vim
+      get_url:
+        url=https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh dest=/home/vagrant/installer.sh
 
-    #- name: install dein.vim 2
-    #  shell: |
-    #    sh /home/vagrant/installer.sh /home/vagrant
+    - name: install dein.vim 2
+      shell: |
+        sh /home/vagrant/installer.sh /home/vagrant
 
-    #- name: .vimrc
-    #  get_url:
-    #    url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc dest=/home/vagrant/.vimrc
+    - name: .vimrc
+      get_url:
+        url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc dest=/home/vagrant/.vimrc
 
-    #- name: update dein.vim setting
-    #  shell: |
-    #    sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" .vimrc
+    - name: update dein.vim setting
+      shell: |
+        sed -i -e "s/\/Users\/naofumi.fujii\//\/home\/vagrant\//g" /home/vagrant/.vimrc
 
     - name: .zshrc
       get_url:
