@@ -9,6 +9,8 @@
       apt: name={{item}} update_cache=yes
       with_items:
         - build-essential
+        - tmux
+        - vim-gnome
 
     #- name: ansible-galaxy
     #  become: yes
