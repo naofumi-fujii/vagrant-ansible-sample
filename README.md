@@ -1,5 +1,5 @@
 # vagrant-ansible-sample
-development env with vagrant and ansible
+development env with vagrant and ansible(galaxy)
 
 requires
 --
@@ -8,6 +8,6 @@ requires
 
 quick start
 --
-- vagrant plugin install vagrant-guest_ansible(galaxy)
+- vagrant plugin install vagrant-guest_ansible
 - git clone
 - vagrant up
