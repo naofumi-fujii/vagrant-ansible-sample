@@ -28,7 +28,7 @@
 
     - name: .zshrc
       get_url:
-        url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.zshrc dest=/home/vagrant/.zshrc
+        url=https://gist.githubusercontent.com/naofumi-fujii/93ac09a76d2575d449aa27e90b0513fe/raw/9acc71cd683504d424070439863ce6987461dea0/.zshrc dest=/home/vagrant/.zshrc
 
     - name: .tmux.conf
       get_url:
