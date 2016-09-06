@@ -3,13 +3,6 @@
   hosts: localhost
   user: vagrant
 
-  pre_tasks:
-    - name: ansible-galaxy
-      become: yes
-      shell: |
-        ansible-galaxy install zzet.rbenv
-        ansible-galaxy install sansible.golang
-
   tasks:
     - name: install packages
       become: yes
@@ -43,7 +36,3 @@
     - name: git alias
       shell: |
         git config --global alias.st status
-
-  #roles:
-  #  - { role: zzet.rbenv }
-  #  - { role: sansible.golang }
