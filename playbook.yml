@@ -10,10 +10,10 @@
       with_items:
         - build-essential
 
-    - name: ansible-galaxy
-      become: yes
-      shell: |
-        ansible-galaxy install zzet.rbenv
+    #- name: ansible-galaxy
+    #  become: yes
+    #  shell: |
+    #    ansible-galaxy install zzet.rbenv
 
     - name: vim
       become: yes
@@ -39,5 +39,5 @@
     - name: .tmux.conf
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf dest=/home/vagrant/.tmux.conf
-  roles:
-    - role: zzet.rbenv
+  #roles:
+  #  - role: zzet.rbenv
