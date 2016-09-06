@@ -8,6 +8,7 @@
       become: yes
       apt: name={{item}} update_cache=yes
       with_items:
+        - git
         - build-essential
         - tmux
         - vim-gnome
