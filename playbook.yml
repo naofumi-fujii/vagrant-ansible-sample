@@ -3,6 +3,12 @@
   hosts: localhost
   user: vagrant
 
+  pre_tasks:
+    - name: ansible-galaxy
+      become: yes
+      shell: |
+        ansible-galaxy install zzet.rbenv
+
   tasks:
     - name: install packages
       become: yes
@@ -11,11 +17,6 @@
         - build-essential
         - tmux
         - vim-gnome
-
-    #- name: ansible-galaxy
-    #  become: yes
-    #  shell: |
-    #    ansible-galaxy install zzet.rbenv
 
     - name: install dein.vim
       shell: |
