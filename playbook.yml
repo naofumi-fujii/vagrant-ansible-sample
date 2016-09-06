@@ -1,6 +1,6 @@
 ---
 - name: Hello Ansible - quick start
-  hosts: localhost
+  hosts: all
   user: vagrant
 
   tasks:

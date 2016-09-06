@@ -1,21 +1,15 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-Vagrant.configure('2') do |config|
-  config.vm.box      = 'ubuntu/wily64'
-  # config.vm.hostname = 'rails-dev-box'
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/trusty64"
 
-  # config.vm.network :forwarded_port, guest: 3000, host: 3000
-  config.vm.provision :shell, inline: "sudo apt-get update"
-  config.vm.provision :shell, inline: "sudo apt-get -y install libffi-dev libssl-dev"
+  config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  config.vm.provision :guest_ansible do |guest_ansible|
-    guest_ansible.playbook = "playbook.yml"
-    # guest_ansible.extra_vars = extra_vars
-    guest_ansible.sudo = false
+  config.vm.provision "ansible_local" do |ansible|
+    ansible.playbook = "playbook.yml"
   end
 
   config.vm.provider 'virtualbox' do |v|
-    v.memory = 1024
+    v.memory = 512
     v.cpus = 2
   end
 end
