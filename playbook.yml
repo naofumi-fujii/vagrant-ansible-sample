@@ -17,10 +17,6 @@
     #  shell: |
     #    ansible-galaxy install zzet.rbenv
 
-    - name: vim
-      become: yes
-      shell: aptitude install -y vim-gnome
-
     - name: install dein.vim
       shell: |
         curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
@@ -41,5 +37,6 @@
     - name: .tmux.conf
       get_url:
         url=https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf dest=/home/vagrant/.tmux.conf
+
   #roles:
   #  - role: zzet.rbenv
