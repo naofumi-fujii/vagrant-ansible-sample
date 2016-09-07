@@ -1,2 +1,3 @@
 - src: zzet.rbenv
+- src: spitfast.rbenv
 - src: geerlingguy.mysql

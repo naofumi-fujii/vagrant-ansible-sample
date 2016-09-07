@@ -13,8 +13,10 @@
         - tmux
         - vim-gnome
         - zsh
+        - libmysqlclient-dev
+        - libmagickwand-dev
 
   roles:
-    - role: zzet.rbenv
+    - role: spitfast.rbenv
     - role: geerlingguy.mysql
       become: yes
