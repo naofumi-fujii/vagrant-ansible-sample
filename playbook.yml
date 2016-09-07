@@ -16,3 +16,5 @@
 
   roles:
     - role: zzet.rbenv
+    - role: geerlingguy.mysql
+      become: yes
