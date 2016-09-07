@@ -13,3 +13,6 @@
         - tmux
         - vim-gnome
         - zsh
+
+  roles:
+    - role: zzet.rbenv
