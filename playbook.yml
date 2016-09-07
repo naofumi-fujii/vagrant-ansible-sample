@@ -1,5 +1,5 @@
 ---
-- name: Hello Ansible - quick start
+- name: Vagrant Ansible Sample
   hosts: all
   user: vagrant
 
