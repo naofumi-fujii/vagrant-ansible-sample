@@ -3,7 +3,10 @@
   hosts: all
   user: vagrant
   vars:
-    hoge: /tmp/src/jdk-7u11-linux-x64.rpm
+    nodejs_npm_global_packages:
+      - name: jslint
+      - name: node-sass
+      - name: phantomjs
 
   tasks:
     - name: install packages
