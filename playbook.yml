@@ -19,8 +19,6 @@
         - tmux
         - vim-gnome
         - zsh
-        - nodejs
-        - npm
         - fonts-ipafont
         - libmysqlclient-dev
         - libmagickwand-dev
