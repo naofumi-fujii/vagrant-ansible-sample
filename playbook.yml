@@ -2,6 +2,8 @@
 - name: Vagrant Ansible Sample
   hosts: all
   user: vagrant
+  vars:
+    hoge: /tmp/src/jdk-7u11-linux-x64.rpm
 
   tasks:
     - name: install packages
