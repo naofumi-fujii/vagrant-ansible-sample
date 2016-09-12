@@ -22,5 +22,6 @@
 
   roles:
     - role: spitfast.rbenv
+    - geerlingguy.nodejs
     - role: geerlingguy.mysql
       become: yes
