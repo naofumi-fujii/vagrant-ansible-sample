@@ -23,7 +23,6 @@
 
   roles:
     - role: spitfast.rbenv
-    - role: trinitronx.tmux
     - role: geerlingguy.nodejs
       become: yes
     - role: geerlingguy.mysql
