@@ -2,3 +2,4 @@
 - src: spitfast.rbenv
 - src: geerlingguy.mysql
 - src: geerlingguy.nodejs
+- src: trinitronx.tmux
