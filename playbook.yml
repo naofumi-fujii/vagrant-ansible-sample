@@ -22,7 +22,6 @@
         - libmagickwand-dev
 
   roles:
-    - role: vaulttec.zsh
     - role: spitfast.rbenv
     - role: trinitronx.tmux
     - role: geerlingguy.nodejs
