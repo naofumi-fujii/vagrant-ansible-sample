@@ -1,5 +1,5 @@
 # vagrant-ansible-sample
-development env with vagrant and ansible(galaxy) for windows
+vagrant provision with ansible(galaxy)
 
 requires
 --
