@@ -22,6 +22,8 @@
         - libmagickwand-dev
 
   roles:
+    - role: joshualund.golang
+      become: yes
     - role: spitfast.rbenv
     - role: trinitronx.tmux
     - role: geerlingguy.nodejs
