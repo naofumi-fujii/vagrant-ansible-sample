@@ -16,7 +16,6 @@
         - git
         - build-essential
         - vim-gnome
-        - zsh
         - fonts-ipafont
         - libmysqlclient-dev
         - libmagickwand-dev
