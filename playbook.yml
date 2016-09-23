@@ -9,6 +9,16 @@
       - name: phantomjs
 
   tasks:
+    - name: download .vimrc
+      get_url:
+        url: https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc
+        dest: /home/vagrant/.vimrc
+
+    - name: download .tmux.conf
+      get_url:
+        url: https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf
+        dest: /home/vagrant/.tmux.conf
+
     - name: install packages
       become: yes
       apt: name={{item}} update_cache=yes
