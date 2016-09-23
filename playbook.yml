@@ -21,6 +21,7 @@
         - libmagickwand-dev
 
   roles:
+    - role: vaulttec.zsh
     - role: joshualund.golang
       become: yes
     - role: spitfast.rbenv
