@@ -9,11 +9,6 @@
       - name: phantomjs
 
   tasks:
-    - name: download .zshrc
-      get_url:
-        url: https://gist.githubusercontent.com/naofumi-fujii/ae6438dedd669e067f22464742c047fe/raw/59e5116ebf05730e0b87c683b07ea1fe5314835c/.zshrc
-        dest: /home/vagrant/.zshrc
-
     - name: download .vimrc
       get_url:
         url: https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc
