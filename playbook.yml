@@ -29,6 +29,7 @@
       apt: name={{item}} update_cache=yes
       with_items:
         - git
+        - nkf
         - build-essential
         - vim-gnome
         - fonts-ipafont
