@@ -9,6 +9,7 @@
       - name: phantomjs
       - name: purify-css
       - name: strip-css-comments-cli
+      - name: n
 
   tasks:
     - name: install dein.vim
