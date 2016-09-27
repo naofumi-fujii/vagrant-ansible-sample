@@ -7,6 +7,7 @@
       - name: jslint
       - name: node-sass
       - name: phantomjs
+      - name: purify-css
 
   tasks:
     - name: download .vimrc
