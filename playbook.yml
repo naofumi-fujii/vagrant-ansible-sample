@@ -12,6 +12,12 @@
       - name: n
 
   tasks:
+    - name: update node
+      become: yes
+      shell: |
+        n latest
+        npm update -g npm
+
     - name: install dein.vim
       shell: |
         curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /home/vagrant/installer.sh
