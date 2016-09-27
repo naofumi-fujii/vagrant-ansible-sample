@@ -8,7 +8,6 @@
       - name: node-sass
       - name: phantomjs
       - name: purify-css
-      - name: strip-css-comments-cli
 
   tasks:
     - name: install dein.vim
