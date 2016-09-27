@@ -10,6 +10,11 @@
       - name: purify-css
 
   tasks:
+    - name: install dein.vim
+      shell: |
+        curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /home/vagrant/installer.sh
+        sh /home/vagrant/installer.sh /home/vagrant
+
     - name: download .vimrc
       get_url:
         url: https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc
