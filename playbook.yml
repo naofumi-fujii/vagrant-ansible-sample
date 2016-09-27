@@ -12,6 +12,9 @@
       - name: n
 
   tasks:
+    - name: set git alias
+      shell: git config --global alias.st status
+
     - name: update node
       become: yes
       shell: |
