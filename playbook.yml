@@ -61,6 +61,7 @@
         - fonts-ipafont
         - libmysqlclient-dev
         - libmagickwand-dev
+        - silversearcher-ag
 
   roles:
     - role: vaulttec.zsh
