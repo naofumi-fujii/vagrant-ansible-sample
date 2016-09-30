@@ -14,6 +14,11 @@
       - name: purify-css
       - name: strip-css-comments-cli
       - name: n
+     zsh_ohmy_plugins:
+      - git
+      - git-flow
+      - docker
+      - rails
 
   tasks:
     - name: set git alias
