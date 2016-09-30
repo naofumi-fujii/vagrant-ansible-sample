@@ -3,7 +3,6 @@
   hosts: all
   user: vagrant
   vars:
-    rbenv_ruby_version: 2.3.1
     rbenv_gems:
       - bundler
       - rubocop
