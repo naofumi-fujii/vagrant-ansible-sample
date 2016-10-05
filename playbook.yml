@@ -3,6 +3,7 @@
   hosts: all
   user: vagrant
   vars:
+    mysql_root_password: ''
     rbenv_ruby_version: 2.3.1
     rbenv_gems:
       - bundler
@@ -21,6 +22,9 @@
       - rails
 
   tasks:
+    - name: symbolic link for mysql.sock
+      shell: ln -s $(mysql_config --socket) /tmp/mysql.sock
+
     - name: set git alias
       shell: git config --global alias.st status
 
