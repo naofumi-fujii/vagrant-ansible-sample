@@ -22,9 +22,6 @@
       - rails
 
   tasks:
-    - name: symbolic link for mysql.sock
-      shell: ln -s $(mysql_config --socket) /tmp/mysql.sock
-
     - name: set git alias
       shell: git config --global alias.st status
 
