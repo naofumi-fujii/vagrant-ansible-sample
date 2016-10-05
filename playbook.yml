@@ -24,6 +24,9 @@
     - name: set git alias
       shell: git config --global alias.st status
 
+    - name: install peco
+      shell: go get github.com/peco/peco/cmd/peco
+
     - name: update node
       become: yes
       shell: |
