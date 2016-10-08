@@ -25,11 +25,6 @@
     - name: set git alias
       shell: git config --global alias.st status
 
-    - name: install go packages
-      shell: |
-        go get github.com/peco/peco/cmd/peco
-        go get github.com/motemen/ghq
-
     - name: update node to latest version
       become: yes
       shell: |
