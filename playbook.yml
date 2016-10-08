@@ -28,7 +28,7 @@
     - name: install peco
       shell: go get github.com/peco/peco/cmd/peco
 
-    - name: update node
+    - name: update node to latest version
       become: yes
       shell: |
         n latest
