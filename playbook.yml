@@ -66,6 +66,7 @@
         - libsqlite3-dev
 
   roles:
+    - role: trinitronx.tmux
     - role: vaulttec.zsh
     - role: joshualund.golang
       become: yes
