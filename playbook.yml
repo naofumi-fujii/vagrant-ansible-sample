@@ -36,20 +36,21 @@
         curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /home/vagrant/installer.sh
         sh /home/vagrant/installer.sh /home/vagrant
 
-    - name: download .vimrc
-      get_url:
-        url: https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.vimrc
-        dest: /home/vagrant/.vimrc
+    - name: Checkout my dotfiles
+      git:
+        repo: https://github.com/naofumi-fujii/dotfiles.git
+        dest: ~/dotfiles
 
-    - name: download .zlogin
-      get_url:
-        url: https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.zlogin
-        dest: /home/vagrant/.zlogin
-
-    - name: download .tmux.conf
-      get_url:
-        url: https://raw.githubusercontent.com/naofumi-fujii/dotfiles/master/.tmux.conf
-        dest: /home/vagrant/.tmux.conf
+    - name: Create symlinks
+      file:
+        src: ~/dotfiles/{{ item }}
+        dest: ~/{{ item }}
+        state: link
+        force: yes
+      with_items:
+        - .tmux.conf
+        - .zlogin
+        - .vimrc
 
     - name: install packages
       become: yes
