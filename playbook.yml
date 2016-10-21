@@ -63,6 +63,7 @@
         - libmysqlclient-dev
         - libmagickwand-dev
         - silversearcher-ag
+        - libsqlite3-dev
 
   roles:
     - role: vaulttec.zsh
