@@ -66,6 +66,12 @@
         - silversearcher-ag
         - libsqlite3-dev
 
+    - name: install go packages
+      shell: |
+        go get github.com/motemen/ghq
+        go get github.com/peco/peco/cmd/peco
+        go get github.com/github/hub
+
   roles:
     - role: vaulttec.zsh
     - role: joshualund.golang
