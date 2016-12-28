@@ -8,5 +8,5 @@ requires
 
 quick start
 --
-- git clone this repo
+- `git clone https://github.com/naofumi-fujii/vagrant-ansible-sample.git`
 - `vagrant up`
