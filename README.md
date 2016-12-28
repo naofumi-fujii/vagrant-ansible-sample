@@ -1,12 +1,12 @@
 # vagrant-ansible-sample
 vagrant provision with ansible(galaxy)
 
-requires
+Requires
 --
 - vagrant
 - virtualbox
 
-quick start
+Quick Start
 --
 - `git clone https://github.com/naofumi-fujii/vagrant-ansible-sample.git`
 - `vagrant up`
