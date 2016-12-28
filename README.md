@@ -8,5 +8,5 @@ requires
 
 quick start
 --
-- git clone
+- git clone this repo
 - vagrant up
