@@ -10,3 +10,4 @@ Quick Start
 --
 - `git clone https://github.com/naofumi-fujii/vagrant-ansible-sample.git`
 - `vagrant up`
+- hoge
