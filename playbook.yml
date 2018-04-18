@@ -22,45 +22,11 @@
       - rails
 
   tasks:
-    - name: set git alias
-      shell: git config --global alias.st status
-
     - name: update node to latest version
       become: yes
       shell: |
         n latest
         npm update -g npm
-
-    - name: install dein.vim
-      shell: |
-        curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /home/vagrant/installer.sh
-        sh /home/vagrant/installer.sh /home/vagrant
-
-    - name: Checkout my dotfiles
-      git:
-        repo: https://github.com/naofumi-fujii/dotfiles.git
-        dest: ~/dotfiles
-
-    - name: Create symlinks
-      file:
-        src: ~/dotfiles/{{ item }}
-        dest: ~/{{ item }}
-        state: link
-        force: yes
-      with_items:
-        - .gemrc
-        - .tmux.conf
-        - .zlogin
-        - .vimrc
-
-    - name: Create ssh config symlinks
-      file:
-        src: ~/dotfiles/.ssh/{{ item }}
-        dest: ~/.ssh/{{ item }}
-        state: link
-        force: yes
-      with_items:
-        - config
 
     - name: install packages
       become: yes
@@ -75,12 +41,6 @@
         - libmagickwand-dev
         - silversearcher-ag
         - libsqlite3-dev
-
-    - name: install go packages
-      shell: |
-        go get github.com/motemen/ghq
-        go get github.com/peco/peco/cmd/peco
-        go get github.com/github/hub
 
   roles:
     - role: vaulttec.zsh
